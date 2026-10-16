@@ -5,5 +5,5 @@
     <color name="text_primary">#292929</color>
     <color name="text_secondary">#999999</color>
     <color name="field_border">#96969E</color>
-
+    <color name="button_disabled">#E0E0E0</color>
 </resources>
