@@ -27,4 +27,9 @@
     <string name="result_skill">Skill: %1$s</string>
     <string name="calendar_icon">Pilih tanggal</string>
     <string name="dropdown_icon">Pilih experience</string>
+
+    <string name="calendar_symbol">▦</string>
+    <string name="dropdown_symbol">▾</string>
+    <string name="confirm">OK</string>
+    <string name="cancel">Batal</string>
 </resources>

@@ -181,7 +181,7 @@ fun BiodataScreen() {
                             readOnly = true,
                             trailingIcon = {
                                 TextButton(onClick = { showDatePicker = true }) {
-                                    Text("▦")
+                                    Text(stringResource(R.string.calendar_symbol))
                                 }
                             },
                             singleLine = true
@@ -198,7 +198,7 @@ fun BiodataScreen() {
                                     TextButton(onClick = {
                                         expandedExperience = true
                                     }) {
-                                        Text("▾")
+                                        Text(stringResource(R.string.dropdown_symbol))
                                     }
                                 },
                                 singleLine = true
@@ -208,8 +208,11 @@ fun BiodataScreen() {
                                 expanded = expandedExperience,
                                 onDismissRequest = { expandedExperience = false }
                             ) {
-                                listOf("Beginner", "Intermediate", "Experienced")
-                                    .forEach { option ->
+                                listOf(
+                                    stringResource(R.string.experience_beginner),
+                                    stringResource(R.string.experience_intermediate),
+                                    stringResource(R.string.experience_experienced)
+                                ).forEach { option ->
                                         DropdownMenuItem(
                                             text = { Text(option) },
                                             onClick = {
@@ -239,12 +242,12 @@ fun BiodataScreen() {
                                     }
                                     showDatePicker = false
                                 }) {
-                                    Text("OK")
+                                    Text(stringResource(R.string.confirm))
                                 }
                             },
                             dismissButton = {
                                 TextButton(onClick = { showDatePicker = false }) {
-                                    Text("Batal")
+                                    Text(stringResource(R.string.cancel))
                                 }
                             }
                         ) {
