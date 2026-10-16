@@ -70,8 +70,13 @@ fun BiodataScreen() {
                     defaultElevation = dimensionResource(R.dimen.card_elevation)
                 )
             ) {
+                Column(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .padding(dimensionResource(R.dimen.form_padding)),
+                    horizontalAlignment = Alignment.CenterHorizontally
+                ) {
 
-    }
 }
 
 @Preview(showBackground = true)
