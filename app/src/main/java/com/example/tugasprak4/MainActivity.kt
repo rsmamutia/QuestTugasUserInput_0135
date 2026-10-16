@@ -34,6 +34,26 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+@Composable
+fun BiodataScreen() {
+    Scaffold(
+        modifier = Modifier.fillMaxSize(),
+        containerColor = colorResource(R.color.white)
+    ) { innerPadding ->
+        Box(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(innerPadding)
+        ) {
+            Image(
+                painter = painterResource(R.drawable.spider_header),
+                contentDescription = null,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(dimensionResource(R.dimen.header_height)),
+                contentScale = androidx.compose.ui.layout.ContentScale.Crop
+            )
+
 
 }
 
