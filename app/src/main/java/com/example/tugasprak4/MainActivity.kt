@@ -82,6 +82,12 @@ fun BiodataScreen() {
                         fontWeight = FontWeight.Bold
                     )
 
+                    Spacer(
+                        modifier = Modifier.height(
+                            dimensionResource(R.dimen.field_spacing)
+                        )
+                    )
+
 
                 }
             }
