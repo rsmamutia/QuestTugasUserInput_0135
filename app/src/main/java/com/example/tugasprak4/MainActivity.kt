@@ -129,7 +129,7 @@ fun BiodataScreen() {
                     )
 
 
-                    Spacer(Modifier.height(28.dp))
+                    Spacer(Modifier.height(dimensionResource(R.dimen.form_top_spacing)))
 
                     Row(
                         modifier = Modifier.fillMaxWidth(),
@@ -152,7 +152,7 @@ fun BiodataScreen() {
                         )
                     }
 
-                    Spacer(Modifier.height(12.dp))
+                    Spacer(Modifier.height(dimensionResource(R.dimen.field_spacing_medium)))
 
                     OutlinedTextField(
                         value = email,
@@ -162,12 +162,12 @@ fun BiodataScreen() {
                         singleLine = true
                     )
 
-                    Spacer(Modifier.height(12.dp))
+                    Spacer(Modifier.height(dimensionResource(R.dimen.field_spacing_medium)))
 
 
-                    Spacer(Modifier.height(12.dp))
+                    Spacer(Modifier.height(dimensionResource(R.dimen.field_spacing_medium)))
 
-// Tanggal Lahir dan Experience
+
                     Row(
                         modifier = Modifier.fillMaxWidth(),
                         horizontalArrangement = Arrangement.spacedBy(8.dp),
@@ -222,7 +222,6 @@ fun BiodataScreen() {
                         }
                     }
 
-// Dialog kalender
                     if (showDatePicker) {
                         val datePickerState = rememberDatePickerState(
                             yearRange = 1950..2026
@@ -253,9 +252,9 @@ fun BiodataScreen() {
                         }
                     }
 
-                    Spacer(Modifier.height(16.dp))
+                    Spacer(Modifier.height(dimensionResource(R.dimen.section_spacing)))
 
-                    Spacer(Modifier.height(16.dp))
+                    Spacer(Modifier.height(dimensionResource(R.dimen.section_spacing)))
 
                     Text(
                         text = stringResource(R.string.choose_skill),
@@ -283,7 +282,7 @@ fun BiodataScreen() {
                         Text(stringResource(R.string.web_skill))
                     }
 
-                    Spacer(Modifier.height(20.dp))
+                    Spacer(Modifier.height(dimensionResource(R.dimen.result_spacing)))
 
 
                     Button(
@@ -301,26 +300,29 @@ fun BiodataScreen() {
                     }
 
                     if (tampilkanHasil) {
-                        Spacer(modifier = Modifier.height(16.dp))
+                        Spacer(Modifier.height(dimensionResource(R.dimen.section_spacing)))
 
                         Text(
-                            text = "Hasil Biodata",
+                            text = stringResource(R.string.result_title),
                             fontWeight = FontWeight.Bold,
                             color = colorResource(R.color.purple_primary)
                         )
 
-                        Text("Nama depan: $namaDepan")
-                        Text("Nama belakang: $namaBelakang")
-                        Text("Email: $email")
-                        Text("Tgl Lahir: $tanggalLahir")
-                        Text("Experience: $experience")
+                        Text(stringResource(R.string.result_first_name, namaDepan))
+                        Text(stringResource(R.string.result_last_name, namaBelakang))
+                        Text(stringResource(R.string.result_email, email))
+                        Text(stringResource(R.string.result_birth_date, tanggalLahir))
+                        Text(stringResource(R.string.result_experience, experience))
 
                         Text(
-                            "Skill: " + listOfNotNull(
-                                if (android) "Android" else null,
-                                if (uiux) "UI/UX" else null,
-                                if (web) "Web" else null
-                            ).joinToString(", ")
+                            stringResource(
+                                R.string.result_skill,
+                                listOfNotNull(
+                                    if (android) stringResource(R.string.android_skill) else null,
+                                    if (uiux) stringResource(R.string.uiux_skill) else null,
+                                    if (web) stringResource(R.string.web_skill) else null
+                                ).joinToString(", ")
+                            )
                         )
                     }
 

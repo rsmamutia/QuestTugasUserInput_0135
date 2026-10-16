@@ -13,4 +13,18 @@
     <string name="uiux_skill">UI/UX</string>
     <string name="web_skill">Web</string>
     <string name="proceed">Proceed</string>
+
+    <string name="experience_beginner">Beginner</string>
+    <string name="experience_intermediate">Intermediate</string>
+    <string name="experience_experienced">Experienced</string>
+
+    <string name="result_title">Hasil Biodata</string>
+    <string name="result_first_name">Nama depan: %1$s</string>
+    <string name="result_last_name">Nama belakang: %1$s</string>
+    <string name="result_email">Email: %1$s</string>
+    <string name="result_birth_date">Tgl Lahir: %1$s</string>
+    <string name="result_experience">Experience: %1$s</string>
+    <string name="result_skill">Skill: %1$s</string>
+    <string name="calendar_icon">Pilih tanggal</string>
+    <string name="dropdown_icon">Pilih experience</string>
 </resources>
