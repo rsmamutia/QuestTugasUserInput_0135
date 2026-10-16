@@ -88,7 +88,10 @@ fun BiodataScreen() {
                         )
                     )
 
-
+                    Text(
+                        text = stringResource(R.string.form_subtitle),
+                        color = colorResource(R.color.text_secondary)
+                    )
                 }
             }
         }
